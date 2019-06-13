@@ -45,10 +45,12 @@ class Student extends Person {
 }
 
 listsSubjects() {
-    this.favSubjects.forEach(function(listsSubjects){
-        return console.log(listSubject);
-        })
-    
+        const arr = this.favSubjects.forEach(element => {
+        console.log(element)
+        
+    });
+
+    return arr
 }
 
 PRAssignment(subject) {
