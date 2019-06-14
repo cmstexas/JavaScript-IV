@@ -45,13 +45,7 @@ class Student extends Person {
 }
 
 listsSubjects() {
-        const arr = this.favSubjects.forEach(element => {
-        console.log(element)
-        
-    });
-
-    return arr
-}
+    this.favSubjects.forEach(element => console.log(element));}
 
 PRAssignment(subject) {
     return(`${this.name} has submitted a PR for ${subject}`);
@@ -99,7 +93,7 @@ const Pam = new Student({
     age: 31,
     previousBackground: 'Art',
     className: 'Intro to HTML',
-    favSubjects: `coding, art, design`
+    favSubjects: ["coding", "art", "design"]
   });
 
   const Jim = new ProjectManager({
@@ -116,8 +110,8 @@ const Pam = new Student({
   console.log(Michael.catchPhrase);
   console.log(Michael.demo("Javascript"));
   console.log(Michael.grade(Pam,"HTML"));
-  console.log(Pam.listsSubjects());
-  console.log(Pam.PRAssignment("Web Design"));
+  console.log(Pam.listsSubjects(Pam.favSubjects))
+    console.log(Pam.PRAssignment("Web Design"));
   console.log(Pam.sprintChallenge("Arrays"));
   console.log(Jim.standUp("Jim's PM Slack Channel"));
   console.log(Jim.debugsCode(Pam, "React"));
